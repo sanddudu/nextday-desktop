@@ -19,7 +19,7 @@
 	"main": "index.html",
 	"window": {
 		"title": "Next Day",
-		"icon": "nextday.png",
+		"icon": "img/nextday.png",
 		"position": "center",
 		"toolbar": false,
 		"width": 320,

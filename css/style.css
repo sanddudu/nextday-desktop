@@ -133,7 +133,7 @@ p {
 	right: 60px;
 	width: 26px;
 	height: 20px;
-	background-image: url("../min.png");
+	background-image: url("../img/min.png");
 	background-size: 25px 20px;
 }
 #line {
@@ -142,7 +142,7 @@ p {
 	right: 48px;
 	width: 13px;
 	height: 20px;
-	background-image: url("../line.png");
+	background-image: url("../img/line.png");
 	opacity: 0.2;
 }
 #exit {
@@ -151,7 +151,7 @@ p {
 	right: 15px;
 	width: 18px;
 	height: 18px;
-	background-image: url("../close.png");
+	background-image: url("../img/close.png");
 }
 #exitpage {
 	position: fixed;
