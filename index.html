@@ -4,6 +4,7 @@
 		<title>Next Day</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="js/jquery-2.1.0.min.js"></script>
 		<script src="js/date.js"></script>
 		<script src="js/index.js"></script>
 	</head>
@@ -26,6 +27,21 @@
 				<p id="event" class="white"></p>
 				<p id="day" class="white"></p>
 			</div>
+			<div id="winctrl">
+				<div id="ctrlback">
+				</div>
+				<div id="min" onclick="min()">
+				</div>
+				<div id="line">
+				</div>
+				<div id="exit" onclick="closewin()">
+				</div>
+			</div>
+		</div>
+		<div id="exitpage">
+			<p id="line1" class="white">THE NEXT DAY</p>
+			<p id="line2" class="white">is always a</p>
+			<p id="line3" class="white">NEW DAY</p>
 		</div>
 	</body>
 </html>

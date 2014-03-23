@@ -16,7 +16,6 @@
        "type": "MIT",
        "url": "http://opensource.org/licenses/MIT"
 	}],
-	"frame": true,
 	"main": "index.html",
 	"window": {
 		"title": "Next Day",
@@ -24,7 +23,8 @@
 		"position": "center",
 		"toolbar": false,
 		"width": 320,
-		"height": 548
+		"height": 548,
+		"frame": false
 	},
 	"dependencies": {
 		"nodegrass": "*"

@@ -1,5 +1,5 @@
 //Load Environment
-var nodegrass = require ('nodegrass');
+var nodegrass = require('nodegrass');
 var gui = require('nw.gui');
 var win = gui.Window.get();
 
@@ -36,4 +36,26 @@ function getinfo() {
 
 window.onload = function () {
 	getinfo();
+	$("#page").mouseenter(function () {
+		$("#winctrl").fadeIn();
+	});
+	$("#page").mouseleave(function () {
+		$("#winctrl").fadeOut();
+	});
+}
+
+win.on('close', function() {
+	$("#exitpage").fadeIn();
+	function realexit() {
+		var t = setTimeout("win.close(true)",2500);
+	}
+	realexit();
+});
+
+function min () {
+	win.minimize();
+}
+
+function closewin () {
+	win.close();
 }
