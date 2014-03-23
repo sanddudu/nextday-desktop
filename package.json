@@ -1,0 +1,33 @@
+{
+	"name": "Next Day Desktop Client",
+	"description": "A third-party desktop client of Next Day mobile app",
+	"version": "0.0.1",
+	"maintainers": [{
+		"name": "Klion Xu",
+		"email": "sanddudu@gmail.com",
+		"web": "http://code5light.com"
+	}],
+	"repositories": [{
+		"type": "git", 
+		"url": "https://github.com/sanddudu/nextday-desktop.git"
+	}],
+	"bugs": "https://github.com/sanddudu/nextday-desktop/issues",
+	"licenses": [{
+       "type": "MIT",
+       "url": "http://opensource.org/licenses/MIT"
+	}],
+	"frame": true,
+	"main": "index.html",
+	"window": {
+		"title": "Next Day",
+		"icon": "nextday.png",
+		"position": "center",
+		"toolbar": false,
+		"width": 320,
+		"height": 548
+	},
+	"dependencies": {
+		"nodegrass": "*"
+	},
+	"user-agent": "Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch)"
+}

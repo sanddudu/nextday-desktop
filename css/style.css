@@ -1,0 +1,109 @@
+body {
+	font-family: '微软雅黑','Microsoft YaHei';
+}
+.white {
+	color: #FFF;
+}
+#page {
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	width: 320px;
+	height: 548px;
+}
+#cover {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	width: 320px;
+	height: 345px;
+	background-image: url("http://xmas2011.nxmix.com/20140322/default@2x.jpg");
+	background-size: 320px 345px;
+}
+#words {
+	position: fixed;
+	top: 284px;
+	left: 0px;
+	right: 0px;
+	width: 320px;
+	height: 61px;
+	z-index: 1;
+}
+#background {
+	position: fixed;
+	top: 284px;
+	left: 0px;
+	right: 0px;
+	width: 320px;
+	height: 61px;
+	background-color: #000;
+	opacity: 0.6;
+	z-index: -1;
+}
+#comments {
+	position: fixed;
+	top: 284px;
+	left: 0px;
+	right: 0px;
+	width: 320px;
+	height: 61px;
+}
+#comment1 {
+	position: fixed;
+	font-size: 21px;
+	top: 290px;
+	left: 14px;
+}
+#comment2 {
+	position: fixed;
+	font-size: 13px;
+	bottom: 211px;
+	left: 14px;
+}
+#date {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	width: 320px;
+	height: 203px;
+	background-color: #18897d;
+}
+#month {
+	position: fixed;
+	font-size: 37px;
+	top: 375px;
+	left: 14px;
+
+}
+#year {
+	position: fixed;
+	font-size: 35px;
+	top: 416px;
+	left: 15px;
+}
+#weekday {
+	position: fixed;
+	font-size: 12px;
+	top: 462px;
+	left: 16px;
+}
+#event {
+	position: fixed;
+	font-size: 12px;
+	bottom: 33px;
+	left: 16px;
+}
+#day {
+	position: fixed;
+	font-size: 165px;
+	bottom: -5px;
+	right: 8px;
+}
+p {
+	-webkit-margin-before: 0 !important;
+	-webkit-margin-after: 0 !important;
+}
