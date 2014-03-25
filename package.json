@@ -20,7 +20,7 @@
 	"window": {
 		"title": "Next Day",
 		"icon": "img/nextday.png",
-		"position": "center",
+		"position": "right",
 		"toolbar": false,
 		"width": 320,
 		"height": 548,
