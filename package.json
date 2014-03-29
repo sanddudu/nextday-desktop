@@ -1,7 +1,7 @@
 {
 	"name": "Next Day Desktop Client",
 	"description": "A third-party desktop client of Next Day mobile app",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"maintainers": [{
 		"name": "Klion Xu",
 		"email": "sanddudu@gmail.com",
