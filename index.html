@@ -7,6 +7,7 @@
 		<script src="js/jquery-2.1.0.min.js"></script>
 		<script src="js/date.js"></script>
 		<script src="js/index.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/player.css">
 	</head>
 	<body>
 		<div id="page">
@@ -32,16 +33,26 @@
 				</div>
 				<div id="drag">
 				</div>
-				<div id="min" onclick="min()">
+				<div id="min">
 				</div>
 				<div id="line">
 				</div>
-				<div id="exit" onclick="closewin()">
+				<div id="exit">
 				</div>
 			</div>
-			<div id="music">
-				<p id="songname"></p>
-				<p id="artist"></p>
+			<div id="musicopen">
+				<div id="musicopenbg">
+				</div>
+				<div id="musicicon">
+				</div>
+			</div>
+			<div id="musicwin">
+				<audio id="todaymusic" src="xxx.mp3" preload="auto" controls></audio>
+				<div id="musicbg"></div>
+				<div id="musicexit"></div>
+				<p id="mwintitle"  class="white">今日音乐</p>
+				<p id="songname" class="white"></p>
+				<p id="artist" class="white"></p>
 			</div>
 		</div>
 		<div id="fullimg">
@@ -51,5 +62,12 @@
 			<p id="line2" class="white">is always a</p>
 			<p id="line3" class="white">NEW DAY</p>
 		</div>
+		<script src="js/audioplayer.min.js"></script>
+		<script type="text/javascript">
+			$( 'audio' ).audioPlayer({
+				strPlay: 'Play',
+				strPause: 'Pause'
+			});
+		</script>
 	</body>
 </html>
