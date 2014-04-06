@@ -23,13 +23,16 @@ V0.0.1:
 
 许可证
 ----------
-使用 MIT 许可证
+程序源代码使用 MIT 许可证
+Nodegrass —— Copyright (c) 2011-2013 sk &lt;skkmvp@hotmail.com&gt; —— MIT License
+Audioplayer —— Copyright (c) Osvaldas Valutis —— MIT License
+jQuery —— MIT License
 
 TODO
 ----------
-**更新至新的接口 (!)**  
 加入图片保存功能  
 加入基于 localstorage 的图片缓存机制  
+~~更新至新的接口~~ 完成  
 ~~增加翻页~~ 取消  
 ~~增加歌曲播放~~ 完成  
 ~~去掉外框架~~ 完成
