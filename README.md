@@ -23,9 +23,9 @@ V0.0.1:
 
 许可证
 ----------
-程序源代码使用 MIT 许可证
-Nodegrass —— Copyright (c) 2011-2013 sk &lt;skkmvp@hotmail.com&gt; —— MIT License
-Audioplayer —— Copyright (c) Osvaldas Valutis —— MIT License
+程序源代码使用 MIT 许可证  
+Nodegrass —— Copyright (c) 2011-2013 sk &lt;skkmvp@hotmail.com&gt; —— MIT License  
+Audioplayer —— Copyright (c) Osvaldas Valutis —— MIT License  
 jQuery —— MIT License
 
 TODO
