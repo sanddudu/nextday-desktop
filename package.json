@@ -1,7 +1,7 @@
 {
 	"name": "Next Day Desktop Client",
 	"description": "A third-party desktop client of Next Day mobile app",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"maintainers": [{
 		"name": "Klion Xu",
 		"email": "sanddudu@gmail.com",
@@ -20,7 +20,7 @@
 	"window": {
 		"title": "Next Day",
 		"icon": "img/nextday.png",
-		"position": "right",
+		"position": "center",
 		"toolbar": false,
 		"width": 320,
 		"height": 548,
@@ -29,5 +29,5 @@
 	"dependencies": {
 		"nodegrass": "*"
 	},
-	"user-agent": "Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch)"
+	"user-agent": "NextDay/4.04 CFNetwork/548.1.4 Darwin/11.0.0"
 }
