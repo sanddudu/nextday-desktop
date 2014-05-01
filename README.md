@@ -21,6 +21,12 @@ V1.0.0:
 V0.0.1:  
 第一版
 
+API
+----------
+详情请见 Wiki 的 API 页面：  
+[https://github.com/sanddudu/nextday-desktop/wiki/API](https://github.com/sanddudu/nextday-desktop/wiki/API)
+
+
 许可证
 ----------
 程序源代码使用 MIT 许可证  
