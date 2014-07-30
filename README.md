@@ -37,8 +37,13 @@ API
 ----------
 程序源代码使用 MIT 许可证  
 Nodegrass —— Copyright (c) 2011-2013 sk &lt;skkmvp@hotmail.com&gt; —— MIT License  
+Moment.js —— MIT License  
 Audioplayer —— Copyright (c) Osvaldas Valutis —— MIT License  
 jQuery —— MIT License
+
+关于加壳的说明
+----------
+本程序释出版均使用 UPX 3.91w 进行加壳，只为压缩之用，并非保护源代码，任何人都可以使用 UPX 程序去壳。
 
 TODO
 ----------
