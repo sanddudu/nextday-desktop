@@ -1,13 +1,13 @@
 {
-	"name": "Next Day Desktop Client",
+	"name": "Next-Day-Desktop-Client",
 	"description": "A third-party desktop client of Next Day mobile app",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"maintainers": [{
 		"name": "Klion Xu",
 		"email": "sanddudu@gmail.com",
 		"web": "http://code5light.com"
 	}],
-	"repositories": [{
+	"repository": [{
 		"type": "git", 
 		"url": "https://github.com/sanddudu/nextday-desktop.git"
 	}],
@@ -21,13 +21,14 @@
 		"title": "Next Day",
 		"icon": "img/nextday.png",
 		"position": "center",
-		"toolbar": false,
+		"toolbar": true,
 		"width": 320,
 		"height": 548,
 		"frame": false
 	},
 	"dependencies": {
-		"nodegrass": "*"
+		"nodegrass": "*",
+		"moment": "*"
 	},
 	"user-agent": "NextDay/4.04 CFNetwork/548.1.4 Darwin/11.0.0"
 }
