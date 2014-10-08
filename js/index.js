@@ -1,8 +1,11 @@
 //Load Environment
 var nodegrass = require('nodegrass');
+var moment = require("moment");
 var gui = require('nw.gui');
 var win = gui.Window.get();
 var fs = require('fs');
+
+//Initialize Start
 
 //Received JSON info storage
 var recvjsondata = "";
@@ -26,8 +29,93 @@ var musicname = "";
 var musicartist = "";
 var nitingcode = "";
 
+//Date Type
+var dateType = "";
+
 //Unresizeable
 win.setResizable(0);
+
+//Initialize End
+
+//Date Function Start
+
+function getDate (dateType) {
+	var month = moment().get('month') + 1;
+	var day = moment().get('date');
+	var out;
+	if (month < 10) {
+		month = '0' + month;
+	};
+	if (day < 10) {
+		day = '0' + day;
+	};
+	switch (dateType) {
+		case "json" :
+			out = moment().get('year') + "/" + month + "/" + day;
+			return out;
+			break;
+		case "image" :
+			out = '' + moment().get('year') + month + day;
+			return out;
+			break;
+		default :
+			console.log("Error:Date Argument Not Found!");
+			break;
+	}
+}
+
+function getjsonDate () {
+	dateType = "json";
+	out = getDate(dateType);
+	return out;
+	dataType = "";
+}
+
+function getimgDate () {
+	dateType = "image";
+	out = getDate(dateType);
+	return out;
+	dataType = "";
+}
+
+function getmonth () {
+	var month = new Array(12);
+	month[0]="JAN";
+	month[1]="FEB";
+	month[2]="MAR";
+	month[3]="APR";
+	month[4]="MAY";
+	month[5]="JUN";
+	month[6]="JUL";
+	month[7]="AUG";
+	month[8]="SEP";
+	month[9]="OCR";
+	month[10]="NOV";
+	month[11]="DEC";
+	return month[moment().get('month')];
+}
+
+function getweekday (){
+	var weekday = new Array(7);
+	weekday[0] = "SUNDAY";
+	weekday[1] = "MONDAY";
+	weekday[2] = "TUESDAY";
+	weekday[3] = "WEDNESDAY";
+	weekday[4] = "THURSDAY";
+	weekday[5] = "FRIDAY";
+	weekday[6] = "SATURDAY";
+	return weekday[moment().get('day')];
+}
+
+function getday (){
+	var day = moment().get('date');
+	if (day < 10) {
+		day = "0" + day;
+	};
+	return "" + day;
+}
+
+//Date Function End
 
 function getinfo() {
 	nodegrass.get("http://nichijou.in/LastDay/" + pulldate + ".json", function(data){
@@ -65,6 +153,10 @@ function getinfo() {
 		$("#artist").html(musicartist);
 		$("#cover").css("background-image", "url('" + pic + "')");
 		$("#fullimg").css("background-image", "url('" + bigpicurl2x + "')");
+		function startupfadeout () {
+			var t = setTimeout("$('#startup').fadeOut()",3000);
+		}
+		startupfadeout();
 	},null,'utf8');
 }
 
@@ -84,9 +176,8 @@ function getupdate(){
 }
 
 $(document).ready(function () {
-	pulldate = getJsonDate();
-	imgdate = getImgDate();
-	getinfo();
+	pulldate = getjsonDate();
+	imgdate = getimgDate();
 	$("#page").mouseenter(function () {
 		$("#winctrl").fadeIn();
 		$("#musicopen").fadeIn();
@@ -115,15 +206,9 @@ $(document).ready(function () {
 	$("#exit").click(function () {
 		win.close();
 	});
-	getupdate();
+    getupdate();
+	getinfo();
 });
-
-window.onload = function () {
-	function startupfadeout () {
-		var t = setTimeout("$('#startup').fadeOut()",3000);
-	}
-	startupfadeout();
-}
 
 win.on('close', function() {
 	$("#exitpage").fadeIn();

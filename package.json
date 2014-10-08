@@ -1,7 +1,7 @@
 {
 	"name": "Next-Day-Desktop-Client",
 	"description": "A third-party desktop client of Next Day mobile app",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"maintainers": [{
 		"name": "Klion Xu",
 		"email": "sanddudu@gmail.com",
@@ -21,7 +21,7 @@
 		"title": "Next Day",
 		"icon": "img/nextday.png",
 		"position": "center",
-		"toolbar": false,
+		"toolbar": true,
 		"width": 320,
 		"height": 548,
 		"frame": false
