@@ -21,7 +21,7 @@
 		"title": "Next Day",
 		"icon": "img/nextday.png",
 		"position": "center",
-		"toolbar": true,
+		"toolbar": false,
 		"width": 320,
 		"height": 548,
 		"frame": false
