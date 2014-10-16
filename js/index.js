@@ -89,7 +89,7 @@ function getmonth () {
 	month[6]="JUL";
 	month[7]="AUG";
 	month[8]="SEP";
-	month[9]="OCR";
+	month[9]="OCT";
 	month[10]="NOV";
 	month[11]="DEC";
 	return month[moment().get('month')];
