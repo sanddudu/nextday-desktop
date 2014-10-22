@@ -19,11 +19,10 @@ var imgdate = "";
 
 //Processed info storage
 var pic = "";
-var comment1 = "";
-var comment2 = "";
+var text_short = "";
 var color_back = "";
 var bigpicurl2x = "";
-var nowevent = "";
+var mawae = "";
 var musicurl = "";
 var musicname = "";
 var musicartist = "";
@@ -121,38 +120,56 @@ function getinfo() {
 	nodegrass.get("http://nichijou.in/LastDay/" + pulldate + ".json", function(data){
 		recvjsondata = data;
 		recvjsondata = JSON.parse(recvjsondata);
-		pic = recvjsondata[imgdate]["images"]["small"].replace("{img}","http://nextday-pic.b0.upaiyun.com");
-		comment1 = recvjsondata[imgdate]["text"]["comment1"];
-		comment2 = recvjsondata[imgdate]["text"]["comment2"];
-		color_back = recvjsondata[imgdate]["colors"]["background"];
-		nowevent = recvjsondata[imgdate]["event"];
-		bigpicurl2x = recvjsondata[imgdate]["images"]["big"].replace("{img}","http://nextday-pic.b0.upaiyun.com");
-		nitingcode = recvjsondata[imgdate]["music"]["nitingCode"];
-		if (recvjsondata[imgdate]["music"]["url"]) {
-			musicurl = recvjsondata[imgdate]["music"]["url"].replace("{music}","http://nextday-file.b0.upaiyun.com/");
-			$("#todaymusic").attr("src", musicurl);
+		pic = recvjsondata[imgdate]["images"]["big568h2x"].replace("{img}","http://nextday-pic.b0.upaiyun.com");
+		if (recvjsondata[imgdate]["geo"]) {
+			geo = recvjsondata[imgdate]["geo"]["reverse"];
 		} else {
-			nodegrass.get("http://www.niting.com/iphone.do?method=getMusicUrlByCode&musiccode=" + nitingcode ,function(data){
-				recvmusicdata = data;
-				recvmusicdata = JSON.parse(recvmusicdata);
-				musicurl = recvmusicdata["object"]["dc_musicurl"];
-				$("#todaymusic").attr("src", musicurl);
-			},null,'utf8');
+			var pattgeo = new RegExp("^[^.]+", "g");
+			var str = recvjsondata[imgdate]["text"]["comment2"];
+			geo = pattgeo.exec(str);
 		};
-		musicname = recvjsondata[imgdate]["music"]["name"];
-		musicartist = recvjsondata[imgdate]["music"]["artist"];
-		$("#year").html(moment().get('year'));
-		$("#month").html(getmonth());
-		$("#weekday").html(getweekday());
+		geo = geo.replace(",", ", ");
+		if (recvjsondata[imgdate]["text"]["short"]) {
+			text_short = recvjsondata[imgdate]["text"]["short"].replace(/,/g, ", ");
+		} else {
+			var pattshort = new RegExp("[^.]+$", "g");
+			var str = recvjsondata[imgdate]["text"]["comment2"];
+			text_short = recvjsondata[imgdate]["text"]["comment1"] + "," + pattshort.exec(str);
+			text_short = text_short.replace(/,/g, ", ");
+		};
+		color_back = recvjsondata[imgdate]["colors"]["background"];
+		if (recvjsondata[imgdate]["music"]) {
+			if (recvjsondata[imgdate]["music"]["url"]) {
+				musicurl = recvjsondata[imgdate]["music"]["url"].replace("{music}","http://nextday-file.b0.upaiyun.com/");
+				$("#todaymusic").attr("src", musicurl);
+			} else {
+				nitingcode = recvjsondata[imgdate]["music"]["nitingCode"];
+				nodegrass.get("http://www.niting.com/iphone.do?method=getMusicUrlByCode&musiccode=" + nitingcode ,function(data){
+					recvmusicdata = data;
+					recvmusicdata = JSON.parse(recvmusicdata);
+					musicurl = recvmusicdata["object"]["dc_musicurl"];
+					$("#todaymusic").attr("src", musicurl);
+				},null,'utf8');
+			};
+			musicname = recvjsondata[imgdate]["music"]["name"];
+			musicartist = recvjsondata[imgdate]["music"]["artist"];
+		} else {
+			musicname = "There is no music here.";
+			musicartist = "";
+		};
+		if (recvjsondata[imgdate]["event"]) {
+			mawae = getmonth() + ". " + getweekday() + ", " + recvjsondata[imgdate]["event"];
+		} else {
+			mawae = getmonth() + ". " + getweekday();
+		};
+		$("#background").css("background-color", color_back);
+		$("#mawae").html(mawae);
 		$("#day").html(getday());
-		$("#date").css("background-color", color_back);
-		$("#event").html(nowevent);
-		$("#comment1").html(comment1);
-		$("#comment2").html(comment2);
-		$("#songname").html("《" + musicname + "》");
+		$("#geo").html(geo);
+		$("#short").html(text_short);
+		$("#songname").html(musicname);
 		$("#artist").html(musicartist);
 		$("#cover").css("background-image", "url('" + pic + "')");
-		$("#fullimg").css("background-image", "url('" + bigpicurl2x + "')");
 		function startupfadeout () {
 			var t = setTimeout("$('#startup').fadeOut()",3000);
 		}
@@ -180,31 +197,41 @@ $(document).ready(function () {
 	imgdate = getimgDate();
 	$("#page").mouseenter(function () {
 		$("#winctrl").fadeIn();
-		$("#musicopen").fadeIn();
+		if ($("#timemachine").css("display") === "none") {
+			$("#tmopen").fadeIn();
+		};
 	});
 	$("#page").mouseleave(function () {
 		$("#winctrl").fadeOut();
-		$("#musicopen").fadeOut();
+		if ($("#timemachine").css("display") === "none") {
+			$("#tmopen").fadeOut();
+		};
 	});
-	$("#cover").click(function () {
-		$("#fullimg").fadeIn();
+	$("#tmopen").click(function () {
+		$("#timemachine").fadeIn();
+		$("#tmopen").css("display", "none");
 	});
-	$("#fullimg").click(function () {
-		$("#fullimg").fadeOut();
-	});
-	$("#musicopen").click(function () {
-		$("#musicwin").fadeIn();
-		$("#musicopen").css("display", "none");
-	});
-	$("#musicexit").click(function () {
-		$("#musicwin").fadeOut();
-		$("#musicopen").css("display", "");
+	$("#tmexit").click(function () {
+		$("#timemachine").fadeOut();
+		$("#tmopen").css("display", "");
 	});
 	$("#min").click(function () {
 		win.minimize();
 	});
 	$("#exit").click(function () {
 		win.close();
+	});
+	$("#play-pause-button").click(function() {
+		if (document.getElementById("todaymusic").paused) {
+			$("#play-pause-button").removeClass("play").addClass("pause");
+			document.getElementById("todaymusic").play();
+		} else {
+			$("#play-pause-button").removeClass("pause").addClass("play");
+			document.getElementById("todaymusic").pause();
+		};
+	});
+	document.getElementById("todaymusic").addEventListener("ended", function() {
+		$("#play-pause-button").removeClass("pause").addClass("play");
 	});
     getupdate();
 	getinfo();

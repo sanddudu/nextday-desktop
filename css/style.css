@@ -1,9 +1,15 @@
+/* Glocal Setting */
 body {
-	font-family: '微软雅黑','Microsoft YaHei';
+	font-family: 'Segoe UI','微软雅黑','Microsoft YaHei';
 }
 .white {
 	color: #FFF;
 }
+p {
+	-webkit-margin-before: 0 !important;
+	-webkit-margin-after: 0 !important;
+}
+/* Startup Page */
 #startup {
 	position: fixed;
 	top: 0px;
@@ -15,130 +21,14 @@ body {
 	z-index: 999;
 	background-image: url('../img/nextday-startup.png');
 }
-#drag {
-	position: fixed;
-	width: 30px;
-	height: 20px;
-	top: 0px;
-	right: 140px;
-	background-color: #000;
-	border-radius: 0px 0px 5px 5px;
-	opacity: 0.6;
-	background-image: url('../img/drag.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	-webkit-app-region: drag;
-}
-#page {
-	position: fixed;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	width: 320px;
-	height: 548px;
-}
-#cover {
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	width: 320px;
-	height: 345px;
-	background-image: url("http://nextday-pic.b0.upaiyun.com/20140322/default@2x.jpg");
-	background-size: 320px 345px;
-}
-#words {
-	position: fixed;
-	top: 284px;
-	left: 0px;
-	right: 0px;
-	width: 320px;
-	height: 61px;
-	z-index: 1;
-}
-#background {
-	position: fixed;
-	top: 284px;
-	left: 0px;
-	right: 0px;
-	width: 320px;
-	height: 61px;
-	background-color: #000;
-	opacity: 0.6;
-	z-index: -1;
-}
-#comments {
-	position: fixed;
-	top: 284px;
-	left: 0px;
-	right: 0px;
-	width: 320px;
-	height: 61px;
-}
-#comment1 {
-	position: fixed;
-	font-size: 21px;
-	top: 290px;
-	left: 14px;
-}
-#comment2 {
-	position: fixed;
-	font-size: 13px;
-	bottom: 211px;
-	left: 14px;
-}
-#date {
-	position: fixed;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	width: 320px;
-	height: 203px;
-	background-color: #18897d;
-	-webkit-user-select: none;
-}
-#month {
-	position: fixed;
-	font-size: 37px;
-	top: 375px;
-	left: 14px;
-
-}
-#year {
-	position: fixed;
-	font-size: 35px;
-	top: 416px;
-	left: 15px;
-}
-#weekday {
-	position: fixed;
-	font-size: 12px;
-	top: 462px;
-	left: 16px;
-}
-#event {
-	position: fixed;
-	font-size: 12px;
-	bottom: 33px;
-	left: 16px;
-}
-#day {
-	position: fixed;
-	font-size: 165px;
-	bottom: -5px;
-	right: 8px;
-}
-p {
-	-webkit-margin-before: 0 !important;
-	-webkit-margin-after: 0 !important;
-}
+/* Window Control */
 #winctrl {
 	position: fixed;
 	width: 100px;
 	height: 20px;
 	top: 0px;
 	right: 0px;
+	z-index: 1;
 }
 #ctrlback {
 	position: fixed;
@@ -183,6 +73,129 @@ p {
 	background-repeat: no-repeat;
 	background-position: center;
 }
+#drag {
+	position: fixed;
+	width: 30px;
+	height: 20px;
+	top: 0px;
+	right: 140px;
+	background-color: #000;
+	border-radius: 0px 0px 5px 5px;
+	opacity: 0.6;
+	background-image: url('../img/drag.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-app-region: drag;
+}
+/* Main Interface */
+#page {
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	width: 320px;
+	height: 548px;
+}
+#cover {
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	width: 320px;
+	height: 548px;
+	background-image: url("../img/default.png");
+	background-size: 320px 548px;
+}
+#date {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	-webkit-user-select: none;
+}
+#mawae {
+	position: fixed;
+	font-size: 16px;
+	letter-spacing: 1px;
+	word-spacing: 1px;
+	left: 13px;
+	bottom: 190px;
+	text-shadow: 0 0 0px #000, 0 0 0px #000, 0 0 5px #000, 0 0 30px #000, 0 0 60px #000;
+}
+#day {
+	position: fixed;
+	font-size: 90px;
+	bottom: 200px;
+	left: 10px;
+	text-shadow: 0px 0px 5px #000;
+}
+#words {
+	position: fixed;
+}
+#geo {
+	position: fixed;
+	font-size: 13px;
+	letter-spacing: 1px;
+	top: 418px;
+	left: 14px;
+	text-shadow: 0 0 0px #000, 0 0 0px #000, 0 0 5px #000, 0 0 30px #000, 0 0 60px #000;
+	-webkit-user-select: none;
+}
+#background {
+	position: fixed;
+	top: 440px;
+	left: 0px;
+	right: 0px;
+	width: 320px;
+	height: 22px;
+	background-color: #000;
+	z-index: -1;
+}
+#short {
+	position: fixed;
+	font-size: 14px;
+	bottom: 88px;
+	left: 13px;
+	text-shadow: 0px 0px 10px #000;
+	-webkit-user-select: none;
+}
+/* Music Player */
+#todaymusic {
+	display: none;
+}
+#songname {
+	position: fixed;
+	font-size: 15px;
+	bottom: 30px;
+	left: 50px;
+	text-shadow: 0 0 0px #000, 0 0 0px #000, 0 0 5px #000, 0 0 30px #000, 0 0 60px #000;
+}
+#artist {
+	position: fixed;
+	font-size: 12px;
+	bottom: 18px;
+	left: 50px;
+	text-shadow: 0 0 0px #000, 0 0 0px #000, 0 0 5px #000, 0 0 30px #000, 0 0 60px #000;
+}
+#play-pause-button {
+	position: fixed;
+	height: 30px;
+	width: 30px;
+	bottom: 16px;
+	left: 11px;
+	background-size: 20px 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.play {
+	background-image: url('../img/play.png');
+}
+.pause {
+	background-image: url('../img/pause.png');
+}
+/* Exit Page */
 #exitpage {
 	position: fixed;
 	top: 0px;
@@ -193,91 +206,4 @@ p {
 	height: 548px;
 	background-image: url("../img/nextdayexit.png");
 	display: none;
-}
-#fullimg {
-	position: fixed;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	width: 320px;
-	height: 548px;
-	background-image: url("http://nextday-pic.b0.upaiyun.com/20140322/big@2x.jpg!jpg85");
-	display: none;
-	background-size: 320px 548px;
-}
-#musicopen {
-	position: fixed;
-	width: 35px;
-	height: 35px;
-	top: 100px;
-	left: 0px;
-}
-#musicopenbg {
-	position: fixed;
-	width: 35px;
-	height: 35px;
-	top: 100px;
-	left: 0px;
-	background-color: #000;
-	border-radius: 0px 5px 5px 0px;
-	opacity: 0.6;
-	z-index: -1;
-}
-#musicicon {
-	position: fixed;
-	width: 35px;
-	height: 35px;
-	top: 100px;
-	left: 0px;
-	background-image: url("../img/music.png");
-	background-size: 15px 15px;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-#musicwin {
-	position: fixed;
-	width: 300px;
-	height: 150px;
-	top: 50px;
-	left: 10px;
-	display: none;
-	-webkit-user-select: none;
-}
-#musicbg {
-	position: fixed;
-	width: 300px;
-	height: 150px;
-	top: 50px;
-	left: 10px;
-	background-color: #000;
-	border-radius: 5px 5px 5px 5px;
-	opacity: 0.6;
-	z-index: -1;
-}
-#musicexit {
-	position: relative;
-	top: 88px;
-	left: 275px;
-	width: 21px;
-	height: 21px;
-	background-image: url("../img/close.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	z-index: 2;
-}
-#mwintitle {
-	position: relative;
-	top: -10px;
-	left: 10px;
-	font-size: 25px;
-}
-#songname {
-	text-align: center;
-	position: relative;
-	font-size: 20px;
-}
-#artist {
-	text-align: center;
-	position: relative;
 }

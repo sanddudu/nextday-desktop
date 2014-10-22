@@ -6,7 +6,7 @@ NextDay-Desktop
 
 第三方 Next Day 手机应用桌面客户端
 
-当前版本: 1.2.1
+当前版本: 2.0.0
 
 使用方法
 ----------
@@ -14,6 +14,9 @@ NextDay-Desktop
 
 版本日志
 ----------
+V2.0.0:  
+重新设计的界面  
+默认字体修改为 Segoe UI  
 V1.2.1:  
 修正了日期处理  
 修正了 10 月英文拼写  
@@ -42,18 +45,8 @@ API
 程序源代码使用 MIT 许可证  
 Nodegrass —— Copyright (c) 2011-2013 sk &lt;skkmvp@hotmail.com&gt; —— MIT License  
 Moment.js —— MIT License  
-Audioplayer —— Copyright (c) Osvaldas Valutis —— MIT License  
 jQuery —— MIT License
 
 关于加壳的说明
 ----------
 本程序释出版均使用 UPX 3.91w 进行加壳，只为压缩之用，并非保护源代码，任何人都可以使用 UPX 程序去壳。
-
-TODO
-----------
-加入图片保存功能  
-加入基于 localstorage 的图片缓存机制  
-~~更新至新的接口~~ 完成  
-~~增加翻页~~ 取消  
-~~增加歌曲播放~~ 完成  
-~~去掉外框架~~ 完成

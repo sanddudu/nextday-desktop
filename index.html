@@ -4,32 +4,11 @@
 		<title>Next Day</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script src="js/date.js"></script>
-		<script src="js/jquery-2.1.0.min.js"></script>
-		<script src="js/index.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/player.css">
 	</head>
 	<body>
 		<div id="startup">
 		</div>
 		<div id="page">
-			<div id="cover">
-			</div>
-			<div id="words">
-				<div id="background">
-				</div>
-				<div id="comments">
-					<p id="comment1" class="white">The next coming days</p>
-					<p id="comment2" class="white">今天不论怎样，全新的明天仍然等待着我</p>
-				</div>
-			</div>
-			<div id="date">
-				<p id="month" class="white"></p>
-				<p id="year" class="white"></p>
-				<p id="weekday" class="white"></p>
-				<p id="event" class="white"></p>
-				<p id="day" class="white"></p>
-			</div>
 			<div id="winctrl">
 				<div id="ctrlback">
 				</div>
@@ -42,31 +21,28 @@
 				<div id="exit">
 				</div>
 			</div>
-			<div id="musicopen">
-				<div id="musicopenbg">
-				</div>
-				<div id="musicicon">
-				</div>
+			<div id="cover">
 			</div>
-			<div id="musicwin">
-				<audio id="todaymusic" src="xxx.mp3" preload="auto" controls></audio>
-				<div id="musicbg"></div>
-				<div id="musicexit"></div>
-				<p id="mwintitle"  class="white">今日音乐</p>
+			<div id="date">
+				<p id="mawae" class="white"></p>
+				<p id="day" class="white"></p>
+			</div>
+			<div id="words">
+				<div id="background">
+				</div>
+				<p id="geo" class="white"></p>
+				<p id="short" class="white"></p>
+			</div>
+			<div id="music">
+				<div id="play-pause-button" class="play"></div>
+				<audio id="todaymusic" preload="auto"></audio>
 				<p id="songname" class="white"></p>
 				<p id="artist" class="white"></p>
 			</div>
 		</div>
-		<div id="fullimg">
-		</div>
 		<div id="exitpage">
 		</div>
-		<script src="js/audioplayer.min.js"></script>
-		<script type="text/javascript">
-			$( 'audio' ).audioPlayer({
-				strPlay: 'Play',
-				strPause: 'Pause'
-			});
-		</script>
+		<script src="js/jquery-2.1.0.min.js"></script>
+		<script src="js/index.js"></script>
 	</body>
 </html>
