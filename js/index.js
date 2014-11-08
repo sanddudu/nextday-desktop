@@ -23,6 +23,7 @@ var text_short = "";
 var color_back = "";
 var bigpicurl2x = "";
 var mawae = "";
+var author = "";
 var musicurl = "";
 var musicname = "";
 var musicartist = "";
@@ -118,8 +119,7 @@ function getday (){
 
 function getinfo() {
 	nodegrass.get("http://nichijou.in/LastDay/" + pulldate + ".json", function(data){
-		recvjsondata = data;
-		recvjsondata = JSON.parse(recvjsondata);
+		recvjsondata = JSON.parse(data);
 		pic = recvjsondata[imgdate]["images"]["big568h2x"].replace("{img}","http://nextday-pic.b0.upaiyun.com");
 		if (recvjsondata[imgdate]["geo"]) {
 			geo = recvjsondata[imgdate]["geo"]["reverse"];
@@ -162,6 +162,9 @@ function getinfo() {
 		} else {
 			mawae = getmonth() + ". " + getweekday();
 		};
+		if (recvjsondata[imgdate]["author"]) {
+			author = "&copy;" + recvjsondata[imgdate]["author"]["name"];
+		}
 		$("#background").css("background-color", color_back);
 		$("#mawae").html(mawae);
 		$("#day").html(getday());
@@ -170,6 +173,7 @@ function getinfo() {
 		$("#songname").html(musicname);
 		$("#artist").html(musicartist);
 		$("#cover").css("background-image", "url('" + pic + "')");
+		$("#author").html(author);
 		function startupfadeout () {
 			var t = setTimeout("$('#startup').fadeOut()",3000);
 		}
@@ -207,14 +211,6 @@ $(document).ready(function () {
 			$("#tmopen").fadeOut();
 		};
 	});
-	$("#tmopen").click(function () {
-		$("#timemachine").fadeIn();
-		$("#tmopen").css("display", "none");
-	});
-	$("#tmexit").click(function () {
-		$("#timemachine").fadeOut();
-		$("#tmopen").css("display", "");
-	});
 	$("#min").click(function () {
 		win.minimize();
 	});
@@ -222,25 +218,25 @@ $(document).ready(function () {
 		win.close();
 	});
 	$("#play-pause-button").click(function() {
-		if (document.getElementById("todaymusic").paused) {
+		if ($("#todaymusic")[0].paused) {
 			$("#play-pause-button").removeClass("play").addClass("pause");
-			document.getElementById("todaymusic").play();
+			$("#todaymusic").trigger("play");
 		} else {
 			$("#play-pause-button").removeClass("pause").addClass("play");
-			document.getElementById("todaymusic").pause();
+			$("#todaymusic").trigger("pause");
 		};
 	});
-	document.getElementById("todaymusic").addEventListener("ended", function() {
+	$("#todaymusic").bind("ended", function () {
 		$("#play-pause-button").removeClass("pause").addClass("play");
 	});
-    getupdate();
+	getupdate();
 	getinfo();
 });
 
 win.on('close', function() {
 	$("#exitpage").fadeIn();
-	function realexit() {
-		var t = setTimeout("win.close(true)",2500);
-	}
-	realexit();
+	$("#slogan").trigger("play");
+	$("#slogan").bind("ended", function () {
+		win.close(true);
+	});
 });

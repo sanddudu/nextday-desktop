@@ -1,7 +1,7 @@
 {
 	"name": "Next-Day-Desktop-Client",
 	"description": "A third-party desktop client of Next Day mobile app",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"maintainers": [{
 		"name": "Klion Xu",
 		"email": "sanddudu@gmail.com",
@@ -29,6 +29,5 @@
 	"dependencies": {
 		"nodegrass": "*",
 		"moment": "*"
-	},
-	"user-agent": "NextDay/4.04 CFNetwork/548.1.4 Darwin/11.0.0"
+	}
 }

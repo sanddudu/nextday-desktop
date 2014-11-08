@@ -1,6 +1,14 @@
 /* Glocal Setting */
+@font-face {
+	font-family: 'Avenir Next UltraLight';
+	src: url('http://nd-desktop.b0.upaiyun.com/avenir-next-ultralight.woff');
+}
+@font-face {
+	font-family: 'Avenir Next W01 Thin Regular';
+	src: url('http://nd-desktop.b0.upaiyun.com/avenir-next-w01-thin.woff');
+}
 body {
-	font-family: 'Segoe UI','微软雅黑','Microsoft YaHei';
+	font-family: 'Avenir Next UltraLight','Segoe UI','微软雅黑','Microsoft YaHei';
 }
 .white {
 	color: #FFF;
@@ -116,32 +124,29 @@ p {
 	-webkit-user-select: none;
 }
 #mawae {
+	font-family: 'Avenir Next W01 Thin Regular';
 	position: fixed;
-	font-size: 16px;
-	letter-spacing: 1px;
-	word-spacing: 1px;
-	left: 13px;
-	bottom: 190px;
-	text-shadow: 0 0 0px #000, 0 0 0px #000, 0 0 5px #000, 0 0 30px #000, 0 0 60px #000;
+	font-size: 18px;
+	left: 14px;
+	bottom: 173px;
+	text-shadow: 2px 2px 2px rgba(0,0,0,1);
 }
 #day {
 	position: fixed;
-	font-size: 90px;
-	bottom: 200px;
+	font-size: 103px;
+	bottom: 172px;
 	left: 10px;
-	text-shadow: 0px 0px 5px #000;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
 }
 #words {
 	position: fixed;
 }
 #geo {
 	position: fixed;
-	font-size: 13px;
-	letter-spacing: 1px;
-	top: 418px;
-	left: 14px;
-	text-shadow: 0 0 0px #000, 0 0 0px #000, 0 0 5px #000, 0 0 30px #000, 0 0 60px #000;
-	-webkit-user-select: none;
+	font-size: 12px;
+	top: 420px;
+	left: 13px;
+	text-shadow: 2px 2px 2px rgba(0,0,0,1);
 }
 #background {
 	position: fixed;
@@ -155,29 +160,46 @@ p {
 }
 #short {
 	position: fixed;
-	font-size: 14px;
-	bottom: 88px;
+	font-size: 13px;
+	bottom: 87px;
 	left: 13px;
-	text-shadow: 0px 0px 10px #000;
-	-webkit-user-select: none;
+}
+#author {
+	position: fixed;
+	font-size: 11px;
+	bottom: 16px;
+	right: 20px;
+	text-align: right;
 }
 /* Music Player */
+#music {
+	font-family: 'Avenir Next UltraLight';
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}
 #todaymusic {
 	display: none;
 }
 #songname {
 	position: fixed;
-	font-size: 15px;
-	bottom: 30px;
+	font-size: 14px;
+	bottom: 29px;
 	left: 50px;
-	text-shadow: 0 0 0px #000, 0 0 0px #000, 0 0 5px #000, 0 0 30px #000, 0 0 60px #000;
 }
 #artist {
 	position: fixed;
-	font-size: 12px;
+	font-size: 9px;
 	bottom: 18px;
 	left: 50px;
-	text-shadow: 0 0 0px #000, 0 0 0px #000, 0 0 5px #000, 0 0 30px #000, 0 0 60px #000;
+}
+#music-bg {
+	position: fixed;
+	bottom: 0px;
+	width: 320px;
+	height: 50px;
+	opacity: 0.7;
+	background-image: url('../img/music-bg.png');
+	background-position: center;
+	background-repeat: no-repeat;
 }
 #play-pause-button {
 	position: fixed;
@@ -197,6 +219,9 @@ p {
 }
 /* Exit Page */
 #exitpage {
+	display: none;
+}
+#exitvideo {
 	position: fixed;
 	top: 0px;
 	bottom: 0px;
@@ -204,6 +229,14 @@ p {
 	right: 0px;
 	width: 320px;
 	height: 548px;
-	background-image: url("../img/nextdayexit.png");
-	display: none;
+}
+#videoimg {
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	width: 320px;
+	height: 548px;
+	background-image: url("../img/video.png");
 }
