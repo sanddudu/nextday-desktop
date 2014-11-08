@@ -43,13 +43,16 @@ API
 详情请见 Wiki 的 API 页面：  
 [https://github.com/sanddudu/nextday-desktop/wiki/API](https://github.com/sanddudu/nextday-desktop/wiki/API)
 
-
 许可证
 ----------
 程序源代码使用 MIT 许可证  
 Nodegrass —— Copyright (c) 2011-2013 sk &lt;skkmvp@hotmail.com&gt; —— MIT License  
 Moment.js —— MIT License  
 jQuery —— MIT License
+
+特别鸣谢
+----------
+Viztor —— 帮助改善阴影和字体
 
 关于加壳的说明
 ----------
