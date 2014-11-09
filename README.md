@@ -52,7 +52,9 @@ jQuery —— MIT License
 
 特别鸣谢
 ----------
-Viztor —— 帮助改善阴影和字体
+orzFly —— API 维护  
+Viztor —— 帮助改善阴影和字体  
+Rasin Gue —— 协助打包
 
 关于加壳的说明
 ----------
