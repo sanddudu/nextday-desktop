@@ -1,34 +1,27 @@
 {
+	"latest": "2.2.0",
 	"2.2.0": {
-		"latest": true,
 		"recommend": true
 	},
 	"2.1.0": {
-		"latest": false,
 		"recommend": true
 	},
 	"2.0.0": {
-		"latest": false,
 		"recommend": false
 	},
 	"1.2.1": {
-		"latest": false,
 		"recommend": false
 	},
 	"1.2.0": {
-		"latest": false,
 		"recommend": false
 	},
 	"1.1.0": {
-		"latest": false,
 		"recommend": false
 	},
 	"1.0.0": {
-		"latest": false,
 		"recommend": false
 	},
 	"0.0.1": {
-		"latest": false,
 		"recommend": false
 	}
 }
