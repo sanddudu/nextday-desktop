@@ -33,7 +33,7 @@ var nitingcode = "";
 var dateType = "";
 
 //Unresizeable
-win.setResizable(0);
+win.setResizable(false);
 
 //Initialize End
 
